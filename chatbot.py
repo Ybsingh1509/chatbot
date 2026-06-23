@@ -11,7 +11,7 @@ if "chat_started" not in st.session_state:
 # Load API key
 if os.path.exists(".env"):
     # While running locally, load environment variables from .env
-    from .env import load_dotenv
+    from dotenv import load_dotenv
     load_dotenv(override=True)
 API_KEY = os.getenv("API_KEY")
 if not API_KEY:
